@@ -1,0 +1,25 @@
+{
+  "name": "trollbox-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "license": "MIT",
+  "author": "codingMASTER398",
+  "dependencies": {
+    "better-tord": "^1.3.7",
+    "give-me-a-joke": "^0.4.0",
+    "he": "^1.2.0",
+    "node-fetch": "^2.6.1",
+    "node-html-parser": "^1.3.1",
+    "request": "^2.88.2",
+    "socket.io-client": "^2.3.1",
+    "tiny-text": "^1.0.1",
+    "trollbox-headers": "0.0.4",
+    "txtgen": "^2.2.8"
+  },
+  "engines": {
+    "node": "v14.15.4",
+    "npm": "6.14.10"
+  }
+}
