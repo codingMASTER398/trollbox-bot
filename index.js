@@ -96,7 +96,7 @@ function connect(name, color, prefix, welcomemsg) {
       
         if (!started) return;
         if (data.msg.startsWith(prefix)) {
-          file = data.msg.slice(prefix.length).split(' ')[0]
+          file = data.msg.toLowerCase().slice(prefix.length).split(' ')[0]
           if(commands[file]){
             commands[file](data, socket)
           }
