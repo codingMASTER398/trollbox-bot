@@ -41,6 +41,15 @@ function connect(name, color, prefix, welcomemsg) {
   })
   socket.on('disconnect', function(data) {
     console.log("Failed to connect, retrying...")
+    var started = false
+    var prefix = "-"
+    var commands = {}
+    var onmessagecommands = []
+    var onuserleftcommands = []
+    var onuserjoinedcommands = []
+    var currentname = ""
+    var currentcolor = ""
+    const socket = "";
     connect(name, color, prefix, welcomemsg)
   });
   socket.on('user joined', function(data) {
@@ -72,25 +81,31 @@ function connect(name, color, prefix, welcomemsg) {
   
   var uses = 0
   socket.on('message', function(data) {
-    data.color = he.decode(data.color)
-    data.msg = he.decode(data.msg)
-    data.home = he.decode(data.home)
-    data.nick = he.decode(data.nick).replace(/discord/g,"").replace(/hugs/g,"")
-  
-    for (let index = 0; index < onmessagecommands.length; index++) {
-      setTimeout(() => {
-        onmessagecommands[index](data);
-      }, 1);
-    }
-  
-    if (!started) return;
-    if (data.msg.startsWith(prefix)) {
-      file = data.msg.slice(prefix.length).split(' ')[0]
-      if(commands[file]){
-        commands[file](data, socket)
+    try{
+      if(String(data)){
+        data.color = he.decode(data.color)
+        data.msg = he.decode(data.msg)
+        data.home = he.decode(data.home)
+        data.nick = he.decode(data.nick).replace(/discord/g,"").replace(/hugs/g,"")
+      
+        for (let index = 0; index < onmessagecommands.length; index++) {
+          setTimeout(() => {
+            onmessagecommands[index](data);
+          }, 1);
+        }
+      
+        if (!started) return;
+        if (data.msg.startsWith(prefix)) {
+          file = data.msg.slice(prefix.length).split(' ')[0]
+          if(commands[file]){
+            commands[file](data, socket)
+          }
+        }
+        
       }
+    }catch{
+      console.log("Error while reading message")
     }
-    
   })
 }
 

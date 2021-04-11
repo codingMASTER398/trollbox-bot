@@ -1,5 +1,4 @@
 # Trollbox-bot
-**NOTE: ONLY WORKS FOR WINDOWS 93's TROLLBOX**
 
 Trollbox-bot is a minimal library for making simple, fast-responding trollbox bots for windows 93.
 
