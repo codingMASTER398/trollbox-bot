@@ -2,7 +2,7 @@ import { Bot } from "../bot.js";
 
 const owner = "Mc4NjQz";
 
-const bot = new Bot("_", "#ff00ff00", "_");
+const bot = new Bot("example-bot", "#ff00ff00", "~~");
 
 bot.onConnect(() => {
   console.debug("connected");
