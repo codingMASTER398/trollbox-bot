@@ -1,18 +1,15 @@
 {
-  "name": "win93-trollbot",
-  "version": "2.0.0",
-  "description": "",
-  "repository": "https://github.com/codingMASTER398/trollbox-bot",
+  "name": "win93-trollbox-bot",
+  "version": "2.0.1",
+  "description": "A minimal library for making simple, fast-responding trollbox bots for windows 93.",
+  "repository": "https://github.com/Toby222/trollbox-bot",
   "main": "bot.js",
   "type": "module",
   "keywords": [],
   "license": "MIT",
-  "author": "codingMASTER398",
+  "author": "Toby",
   "dependencies": {
     "he": "^1.2.0",
-    "node-fetch": "^2.6.1",
-    "node-html-parser": "^1.4.9",
-    "request": "^2.88.2",
     "socket.io-client": "^2.4.0",
     "trollbox-headers": "0.0.4"
   },

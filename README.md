@@ -1,6 +1,6 @@
-# Trollbox-bot
+# Trollbot
 
-Trollbox-bot is a minimal library for making simple, fast-responding trollbox bots for windows 93.
+Trollbot is a minimal library for making simple, fast-responding trollbox bots for windows 93.
 
 ## Types
 
