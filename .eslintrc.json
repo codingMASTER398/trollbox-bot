@@ -1,0 +1,31 @@
+{
+  "env": {
+    "es2021": true,
+    "node": true
+  },
+  "extends": ["eslint:recommended", "standard", "prettier"],
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-unused-vars": [
+      "error",
+      {
+        "varsIgnorePattern": "^__.+$",
+        "argsIgnorePattern": "^_.+$",
+        "args": "all"
+      }
+    ],
+    "func-names": ["error", "always"],
+    "func-style": ["error", "declaration"],
+    "no-inner-declarations": "off",
+    "prefer-const": "error",
+    "no-var": "error",
+    "no-shadow": [
+      "error",
+      { "builtinGlobals": true, "hoist": "all", "allow": ["name", "event"] }
+    ],
+    "eqeqeq": ["error", "smart"]
+  }
+}
