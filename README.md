@@ -1,3 +1,6 @@
+# Message for Toby222
+I couldn't reach out to you any other way, but the point is that you did a much better job at making this package than I did. Mine is spaghetti code (I'm better now), so if you want to you can take full ownership of this, change the LICENSE, whatever you need. Thank you, if you need to reach out to me, DM codingMASTER398#5751 on discord.
+
 # Trollbot
 
 Trollbot is a minimal library for making simple, fast-responding trollbox bots for windows 93.
